@@ -43,7 +43,7 @@
 //
 #define USE_I2C		1
 
-#define I2C_KHZ		50			// ustalamy prêdkoœæ na magistrali I2C od 50 kHz do 400 kHz (standard to 100 kHz)
+#define I2C_KHZ		100			// ustalamy prêdkoœæ na magistrali I2C od 50 kHz do 400 kHz (standard to 100 kHz)
 
 // ekspandery PCF8574(A) obs³uguj¹ standardowo 100 kHz mo¿na jednak zwiêkszaæ prêdkoœæ spokojnie do 250-300 kHz
 // natomiast jeœli przewody I2C s¹ bardzo d³ugie mo¿na zmniejszyæ prêdkoœæ do 50 kHz

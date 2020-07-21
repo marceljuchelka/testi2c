@@ -151,7 +151,7 @@ int main(void) {
 
 #if I2C_MODE == 0	// MASTER ATmega
 	int i2c_bitrate;
-	i2c_bitrate = i2c_init( 800 );
+	i2c_bitrate = i2c_init( 100 );
 
 	lcd_int( i2c_bitrate );
 	lcd_str_P( PSTR(" kHz"));
