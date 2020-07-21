@@ -91,10 +91,10 @@
 
 #else
 	// Tu definiujemy piny ekspandera do których pod³¹czamy sygna³y D7..D4 LCD
-	#define LCD_D7 	6
-	#define LCD_D6 	5
-	#define LCD_D5 	4
-	#define LCD_D4 	3
+	#define LCD_D7 	7
+	#define LCD_D6 	6
+	#define LCD_D5 	5
+	#define LCD_D4 	4
 
 	// tu definiujemy piny ekspandera do których pod³¹czamy sygna³y RS,RW, E
 	#define LCD_RS 	0
@@ -102,7 +102,7 @@
 	#define LCD_E 	2
 
 #if USE_BACKLIGHT == 1
-	#define LCD_LED 7		// PODŒWIETLENIE LCD
+	#define LCD_LED 3		// PODŒWIETLENIE LCD
 #endif
 
 	#include "../MK_I2C/mk_i2c.h"
@@ -135,7 +135,7 @@
 
 // definicje adresów w DDRAM dla ró¿nych wyœwietlaczy
 // inne s¹ w wyœwietlaczach 2wierszowych i w 4wierszowych
-#if ( (LCD_ROWS == 4) && (LCD_COLS == 20) )
+#if ( (LCD_ROWS == 2) && (LCD_COLS == 20) )
 #define LCD_LINE1 0x00		// adres 1 znaku 1 wiersza
 #define LCD_LINE2 0x28		// adres 1 znaku 2 wiersza
 #define LCD_LINE3 0x14  	// adres 1 znaku 3 wiersza

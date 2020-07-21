@@ -22,7 +22,7 @@
 #include <util/delay.h>
 
 #include "MK_I2C/mk_i2c.h"
-#include "MK_LCD/mk_lcd44780.h"
+
 
 /*
  * 	MODE 0 - ATmega
@@ -151,7 +151,7 @@ int main(void) {
 
 #if I2C_MODE == 0	// MASTER ATmega
 	int i2c_bitrate;
-	i2c_bitrate = i2c_init( 100 );
+	i2c_bitrate = i2c_init( 800 );
 
 	lcd_int( i2c_bitrate );
 	lcd_str_P( PSTR(" kHz"));
@@ -163,6 +163,8 @@ int main(void) {
 	PORTC |= (1<<PC6);
 
 	uint8_t licznik = 0;
+	lcd_init();
+	lcd_LED( 1 );
 #endif
 
 #if I2C_MODE == 1	// SLAVE TWI - ATmega
